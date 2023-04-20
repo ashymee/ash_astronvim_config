@@ -19,18 +19,18 @@ return {
       { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open Todo in Telescope" },
     },
   },
-  -- {
-  --   "akinsho/flutter-tools.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "stevearc/dressing.nvim", -- optional for vim.ui.select
-  --   },
-  --   opts = {},
-  --   event = "User AstroFile",
-  --   -- lazy = false,
-  -- },
-  { "dart-lang/dart-vim-plugin" },
-  { "thosakwe/vim-flutter" },
-  { "natebosch/vim-lsc" },
-  { "natebosch/vim-lsc-dart" },
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+    opts = {},
+    event = "User AstroFile",
+    -- lazy = false,
+  },
+  -- { "dart-lang/dart-vim-plugin" },
+  -- { "thosakwe/vim-flutter" },
+  -- { "natebosch/vim-lsc" },
+  -- { "natebosch/vim-lsc-dart" },
 }
