@@ -29,6 +29,13 @@ return {
     event = "User AstroFile",
     -- lazy = false,
   },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      transparent_background = true,
+    },
+  },
   -- { "dart-lang/dart-vim-plugin" },
   -- { "thosakwe/vim-flutter" },
   -- { "natebosch/vim-lsc" },

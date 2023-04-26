@@ -17,7 +17,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "oxocarbon",
+  -- catppuccin, everforest, gruvbox, kanagawa, mini-base16, nightfox, oxocarbon, rose-pine, tokyonight
+  colorscheme = "catppuccin-mocha",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,

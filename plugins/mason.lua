@@ -5,7 +5,27 @@ return {
     "williamboman/mason-lspconfig.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
-      -- ensure_installed = { "lua_ls" },
+      -- ensure_installed = {
+      -- "lua_ls",
+      -- "dockerls",
+      -- "docker_compose_language_service",
+      -- "golangci_lint_ls",
+      -- "gopls",
+      -- "jsonls",
+      -- "tsserver",
+      -- "marksman",
+      -- "intelephense",
+      "prismals",
+      -- "pyright",
+      -- "ruby_ls",
+      -- "sqlls",
+      -- "svelte",
+      -- "tailwindcss",
+      -- "vuels",
+      -- "yamlls",
+      -- "cssls",
+      -- "csharp_ls",
+      -- },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -20,7 +40,7 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      -- ensure_installed = { "python" },
+      -- ensure_installed = { "python", "js", "dart", "php" },
     },
   },
 }
