@@ -23,7 +23,6 @@ return {
         "tailwindcss",
         "vuels",
         "yamlls",
-        "cssls",
         "csharp_ls",
         "tsserver",
       },
