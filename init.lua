@@ -17,8 +17,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  -- catppuccin, everforest, gruvbox, kanagawa, mini-base16, nightfox, oxocarbon, rose-pine, tokyonight
-  colorscheme = "kanagawa",
+  -- catppuccin, everforest, gruvbox, kanagawa, kanagawa-dragon, kanagawa-lotus, kanagawa-wave, mini-base16, nightfox, oxocarbon, rose-pine, tokyonight, NeoSolarized, solarized
+  colorscheme = "NeoSolarized",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -50,6 +50,17 @@ return {
     servers = {
       -- "pyright"
     },
+    ["server-settings"] = {
+      eslint = {
+        on_attach = function(_, bufnr) -- _ as client
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
+            command = "silent! EslintFixAll",
+          })
+        end,
+      },
+    },
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -78,4 +89,62 @@ return {
     --   },
     -- }
   end,
+  icons = {
+    ActiveLSP = "",
+    ActiveTS = " ",
+    BufferClose = "",
+    DapBreakpoint = "",
+    DapBreakpointCondition = "",
+    DapBreakpointRejected = "",
+    DapLogPoint = "",
+    DapStopped = "",
+    DefaultFile = "",
+    Diagnostic = "",
+    DiagnosticError = "",
+    DiagnosticHint = "",
+    DiagnosticInfo = "",
+    DiagnosticWarn = "",
+    Ellipsis = "",
+    FileModified = "",
+    FileReadOnly = "",
+    FoldClosed = "",
+    FoldOpened = "",
+    FolderClosed = "",
+    FolderEmpty = "",
+    FolderOpen = "",
+    Git = "",
+    GitAdd = "",
+    GitBranch = "",
+    GitChange = "",
+    GitConflict = "",
+    GitDelete = "",
+    GitIgnored = "◌",
+    GitRenamed = "➜",
+    GitStaged = "✓",
+    GitUnstaged = "✗",
+    GitUntracked = "★",
+    LSPLoaded = "",
+    LSPLoading1 = "",
+    LSPLoading2 = "",
+    LSPLoading3 = "",
+    MacroRecording = "",
+    Paste = "",
+    Search = "",
+    Selected = "",
+    TabClose = "",
+  },
+  -- plugins = {
+  --   ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
+  --     local null_ls = require "null-ls"
+  --
+  --     config.sources = {
+  --       null_ls.builtins.formatting.stylua,
+  --       null_ls.builtins.formatting.prettierd,
+  --       null_ls.builtins.formatting.eslint_d,
+  --       null_ls.builtins.diagnostics.eslint_d,
+  --       null_ls.builtins.code_actions.eslint_d,
+  --     }
+  --     return config
+  --   end
+  -- }
 }

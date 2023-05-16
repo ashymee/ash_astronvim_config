@@ -13,6 +13,13 @@ return {
   { import = "astrocommunity.colorscheme.oxocarbon" },
   { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.colorscheme.kanagawa" },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      theme = "dragon",
+      transparent = true
+    }
+  },
   { import = "astrocommunity.colorscheme.nightfox" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.tokyonight" },

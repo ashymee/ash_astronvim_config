@@ -30,12 +30,30 @@ return {
     -- lazy = false,
   },
   -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   opts = {
-  --     transparent_background = true,
-  --   },
+  --   "overcache/NeoSolarized",
   -- },
+  -- {
+  --   "svrana/neosolarized.nvim"
+  -- },
+  {
+    "Tsuzat/NeoSolarized.nvim",
+    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    -- config = function()
+    --   vim.cmd [[ colorscheme NeoSolarized ]]
+    -- end
+  },
+  -- additional configuration if set background to transparent
+  -- it needs to set background_colour
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#1a1b26"
+    }
+  }
+  -- {
+  --   "shaunsingh/solarized.nvim"
+  -- }
   -- { "dart-lang/dart-vim-plugin" },
   -- { "thosakwe/vim-flutter" },
   -- { "natebosch/vim-lsc" },
