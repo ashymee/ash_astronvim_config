@@ -50,12 +50,14 @@ return {
     opts = {
       background_colour = "#1a1b26"
     }
-  }
-  -- {
-  --   "shaunsingh/solarized.nvim"
-  -- }
-  -- { "dart-lang/dart-vim-plugin" },
-  -- { "thosakwe/vim-flutter" },
-  -- { "natebosch/vim-lsc" },
-  -- { "natebosch/vim-lsc-dart" },
+  },
+  {
+    "jose-elias-alvarez/typescript.nvim", -- add lsp plugin
+    {
+      "williamboman/mason-lspconfig.nvim",
+      opts = {
+        ensure_installed = { "tsserver" }, -- automatically install lsp
+      },
+    },
+  },
 }

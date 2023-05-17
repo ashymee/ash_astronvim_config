@@ -36,6 +36,7 @@ return {
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
         },
+        organize_imports_on_format = true
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
@@ -50,17 +51,10 @@ return {
     servers = {
       -- "pyright"
     },
-    ["server-settings"] = {
-      eslint = {
-        on_attach = function(_, bufnr) -- _ as client
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
-            command = "silent! EslintFixAll",
-          })
-        end,
-      },
-    },
+    setup_handlers = {
+      -- add custom handler
+      tsserver = function(_, opts) require("typescript").setup { server = opts } end
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -133,18 +127,13 @@ return {
     Selected = "",
     TabClose = "",
   },
-  -- plugins = {
-  --   ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
-  --     local null_ls = require "null-ls"
-  --
-  --     config.sources = {
-  --       null_ls.builtins.formatting.stylua,
-  --       null_ls.builtins.formatting.prettierd,
-  --       null_ls.builtins.formatting.eslint_d,
-  --       null_ls.builtins.diagnostics.eslint_d,
-  --       null_ls.builtins.code_actions.eslint_d,
-  --     }
-  --     return config
-  --   end
-  -- }
+  plugins = {
+    {
+      "L3MON4D3/LuaSnip",
+      config = function(plugin, opts)
+        require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
+        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+      end,
+    },
+  },
 }
