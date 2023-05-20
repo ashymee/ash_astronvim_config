@@ -1,0 +1,18 @@
+{
+  "Ignore Exhaustive Dependencies Array": {
+    "prefix": "_eslint",
+    "body": "// eslint-disable-next-line react-hooks/exhaustive-deps"
+  },
+  "Array Function": {
+    "prefix": "_rafce",
+    "body": [
+      "const $1 = () => {",
+      "\treturn (",
+      "\t\t<div>$2</div>",
+      "\t)",
+      "}",
+      "",
+      "export default $1"
+    ]
+  }
+}
