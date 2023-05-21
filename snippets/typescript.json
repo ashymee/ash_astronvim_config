@@ -29,18 +29,4 @@
     ],
     "description": "Create functional component for client side"
   },
-  "Zustand State type": {
-    "prefix": "zs",
-    "body": [
-      "$state: ${2:state_type};",
-      "set$state/^(\\w+)/${1:/capitalize}/($state: ${2:state_type}) => void"
-    ],
-    "description": ""
-  },
-  "TEST": {
-    "prefix": "xx",
-    "body": [
-      "$state1, $state1/^(\\w+)/$/capitalize/"
-    ]
-  }
 }
