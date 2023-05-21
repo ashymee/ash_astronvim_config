@@ -1,18 +1,46 @@
 {
   "Ignore Exhaustive Dependencies Array": {
     "prefix": "_eslint",
-    "body": "// eslint-disable-next-line react-hooks/exhaustive-deps"
+    "body": "// eslint-disable-next-line react-hooks/exhaustive-deps",
+    "description": "by Ashymee"
   },
-  "Array Function": {
-    "prefix": "_rafce",
+  "Functional Component": {
+    "prefix": "_fc",
     "body": [
-      "const $1 = () => {",
+      "const ${TM_FILENAME_BASE} = () => {",
       "\treturn (",
-      "\t\t<div>$2</div>",
+      "\t\t<div>$0</div>",
       "\t)",
-      "}",
-      "",
-      "export default $1"
+      "}\n",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Create functional component for server side"
+  },
+  "Client Functional Component": {
+    "prefix": "_cfc",
+    "body": [
+      "\"use client\";\n",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>$0</div>",
+      "\t)",
+      "}\n",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Create functional component for client side"
+  },
+  "Zustand State type": {
+    "prefix": "zs",
+    "body": [
+      "$state: ${2:state_type};",
+      "set$state/^(\\w+)/${1:/capitalize}/($state: ${2:state_type}) => void"
+    ],
+    "description": ""
+  },
+  "TEST": {
+    "prefix": "xx",
+    "body": [
+      "$state1, $state1/^(\\w+)/$/capitalize/"
     ]
   }
 }
