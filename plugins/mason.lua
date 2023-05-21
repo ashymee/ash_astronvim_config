@@ -6,27 +6,32 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        "lua_ls",
-        "dockerls",
-        "docker_compose_language_service",
-        -- "golangci_lint_ls",
-        -- "gopls",
-        "jsonls",
-        "tsserver",
-        "marksman",
-        "intelephense",
-        "prismals",
-        "pyright",
-        -- "ruby_ls",
-        "sqlls",
-        "svelte",
-        "tailwindcss",
-        "vuels",
-        "yamlls",
-        "csharp_ls",
-        "tsserver",
+        -- LSP/Mason                       TS [TreeSitter]
+        -- -------------------------------------------------------------
+        "lua_ls",                          -- lua
+        "dockerls",                        -- dockerfile
+        "docker_compose_language_service", -- dockerfile
+        "gopls",                           -- go
+        "jsonls",                          -- json & jsonc
+        "tsserver",                        -- javascript & typescript
+        "marksman",                        -- markdown
+        "intelephense",                    -- php
+        "prismals",                        -- prisma
+        "pyright",                         -- python
+        "ruby_ls",                         -- ruby
+        "sqlls",                           -- sql
+        "svelte",                          -- svelte
+        "tailwindcss",                     -- css
+        "vuels",                           -- vue
+        "yamlls",                          -- yaml
+        "csharp_ls",                       -- c_sharp
+        "rust_analyzer",                   -- rust
+        "emmet_ls",                        -- html
+        "graphql",                         -- graphql
+        "zls"                              -- zig
+        -- additional TS: fish, tsx, jsx (@LSP), dart, gitignore, dot, graphql, scss
       },
-      automatic_installation = false,
+      automatic_installation = true,
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
