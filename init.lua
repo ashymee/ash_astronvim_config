@@ -106,7 +106,7 @@ return {
     FolderClosed = "",
     FolderEmpty = "",
     FolderOpen = "",
-    Git = "",
+    Git = "",
     GitAdd = "",
     GitBranch = "",
     GitChange = "",
