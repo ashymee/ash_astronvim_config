@@ -1,0 +1,13 @@
+{
+  "New Snippet": {
+    "prefix": "__snip",
+    "body": [
+      "\"${0:snippet_name}\": {",
+      "\t\"prefix\": \"${1:prefix_string}\",",
+      "\t\"body\": [\"${2:body_string_or_array}\"],",
+      "\t\"description\": \"\"",
+      "}"
+    ],
+    "description": "by Ashymee"
+  }
+}
