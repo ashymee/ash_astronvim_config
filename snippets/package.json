@@ -1,5 +1,5 @@
 {
-  "name": "ashymee-snippets",
+  "name": "user snippets",
   "engines": {
     "vscode": "^1.11.0"
   },
@@ -8,7 +8,9 @@
       {
         "language": [
           "typescript",
-          "typescriptreact"
+          "typescriptreact",
+          "ts",
+          "tsx"
         ],
         "path": "./typescript.json"
       },
