@@ -3,6 +3,7 @@ return {
   opts = {
     ensure_installed = {
       "lua",
+      "yaml",
       -- "dockerfile",
       -- "go",
       -- "json",
@@ -18,7 +19,6 @@ return {
       -- "css",
       -- "scss",
       -- "vue",
-      -- "yaml",
       -- "c_sharp",
       -- "rust",
       -- "html",
