@@ -74,7 +74,12 @@ return {
                 return opts
             end
         },
-        {"rebelot/kanagawa.nvim", opts = {theme = "dragon", transparent = true}}
+        {"rebelot/kanagawa.nvim", opts = {theme = "dragon", transparent = true}},
+        "simrat39/rust-tools.nvim", -- add lsp plugin
+        {
+            "williamboman/mason-lspconfig.nvim",
+            opts = {ensure_installed = {"rust_analyzer"}}
+        }
     },
     updater = {
         remote = "origin", -- remote to use
@@ -118,6 +123,9 @@ return {
             -- add custom handler
             tsserver = function(_, opts)
                 require("typescript").setup {server = opts}
+            end,
+            rust_analyzer = function(_, opts)
+                require("rust-tools").setup {server = opts}
             end
         }
     },
