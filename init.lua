@@ -96,15 +96,18 @@ return {
       -- control auto formatting on save
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
+        allow_filetypes = {
+          -- enable format on save for specified filetypes only
           -- "go",
         },
-        ignore_filetypes = { -- disable format on save for specified filetypes
+        ignore_filetypes = {
+          -- disable format on save for specified filetypes
           -- "python",
         },
         organize_imports_on_format = true,
       },
-      disabled = { -- disable formatting capabilities for the listed language servers
+      disabled = {
+        -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
@@ -134,6 +137,15 @@ return {
       end,
       rust_analyzer = function(_, opts)
         require("rust-tools").setup { server = opts }
+      end,
+      cssls = function(_, opts)
+        require("lspconfig").cssls.setup {
+          cmd = { "vscode-css-language-server", "--stdio" },
+          filetypes = { "css", "scss", "less" },
+          settings = {
+            css = { lint = { unknownAtRules = "ignore" }, validate = true },
+          },
+        }
       end,
     },
   },

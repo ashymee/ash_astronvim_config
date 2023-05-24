@@ -6,7 +6,11 @@ return {
     event = "User AstroFile",
     cmd = { "TodoQuickFix" },
     keys = {
-      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open Todo in Telescope" },
+      {
+        "<leader>T",
+        "<cmd>TodoTelescope<cr>",
+        desc = "Open Todo in Telescope",
+      },
     },
   },
   {
@@ -19,15 +23,12 @@ return {
   },
   {
     "Tsuzat/NeoSolarized.nvim",
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
   },
   {
-  
-    "rcarriga/nvim-notify",-- additional configuration if set background to transparent
-    opts = {
-      background_colour = "#1a1b26"
-    }
+    "rcarriga/nvim-notify", -- additional configuration if set background to transparent
+    opts = { background_colour = "#1a1b26" },
   },
   {
     "jose-elias-alvarez/typescript.nvim", -- add lsp plugin
