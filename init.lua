@@ -123,7 +123,6 @@ return {
       "dockerls",
       "emmet_ls",
       "gopls",
-      "graphql",
       "html",
       "intelephense",
       "jsonls",
@@ -133,7 +132,10 @@ return {
     setup_handlers = {
       -- add custom handler
       tsserver = function(_, opts)
-        require("typescript").setup { server = opts }
+        require("typescript").setup {
+          server = opts,
+          root_dir = require("lspconfig.util").root_pattern ".git",
+        }
       end,
       rust_analyzer = function(_, opts)
         require("rust-tools").setup { server = opts }
@@ -145,6 +147,7 @@ return {
           settings = {
             css = { lint = { unknownAtRules = "ignore" }, validate = true },
           },
+          root_dir = require("lspconfig.util").root_pattern ".git",
         }
       end,
     },
