@@ -148,6 +148,30 @@ return {
             css = { lint = { unknownAtRules = "ignore" }, validate = true },
           },
           root_dir = require("lspconfig.util").root_pattern ".git",
+          autostart = false,
+        }
+      end,
+      tailwindcss = function(_, opts)
+        require("lspconfig").tailwindcss.setup {
+          root_dir = require("lspconfig.util").root_pattern ".git",
+          filetypes = {
+            "astro",
+            "html",
+            "php",
+            "css",
+            "postcss",
+            "sass",
+            "scss",
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+          },
+        }
+      end,
+      emmet_ls = function(_, opts)
+        require("lspconfig").emmet_ls.setup {
+          autostart = true,
         }
       end,
     },
