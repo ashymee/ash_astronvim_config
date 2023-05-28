@@ -1,6 +1,20 @@
 return {
+  -- NeoSolarized,
   -- catppuccin,
+  -- dracula
   -- everforest,
+  -- github_dark
+  -- github_dark_colorblind
+  -- github_dark_default
+  -- github_dark_dimmed
+  -- github_dark_high_contrast
+  -- github_dark_tritanopia
+  -- github_dimmed
+  -- github_light
+  -- github_light_colorblind
+  -- github_light_default
+  -- github_light_high_contrast
+  -- github_light_tritanopia
   -- gruvbox,
   -- kanagawa,
   -- kanagawa-dragon,
@@ -8,12 +22,15 @@ return {
   -- kanagawa-wave,
   -- mini-base16,
   -- nightfox,
+  -- nord
   -- oxocarbon,
   -- rose-pine,
-  -- tokyonight,
-  -- NeoSolarized,
   -- solarized
-  colorscheme = "NeoSolarized",
+  -- tokyonight-night,
+  -- tokyonight-storm,
+  -- tokyonight-day,
+  -- tokyonight-moon,
+  colorscheme = "github_dark_high_contrast",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
@@ -66,10 +83,6 @@ return {
         return opts
       end,
     },
-    {
-      "rebelot/kanagawa.nvim",
-      opts = { theme = "dragon", transparent = true },
-    },
     "simrat39/rust-tools.nvim", -- add lsp plugin
     {
       "williamboman/mason-lspconfig.nvim",
@@ -119,7 +132,6 @@ return {
       "bashls",
       "csharp_ls",
       "cssls",
-      -- "denols",
       "dockerls",
       "emmet_ls",
       "gopls",
@@ -143,36 +155,25 @@ return {
       cssls = function(_, opts)
         require("lspconfig").cssls.setup {
           cmd = { "vscode-css-language-server", "--stdio" },
-          filetypes = { "css", "scss", "less" },
-          settings = {
-            css = { lint = { unknownAtRules = "ignore" }, validate = true },
-          },
-          root_dir = require("lspconfig.util").root_pattern ".git",
-          autostart = false,
-        }
-      end,
-      tailwindcss = function(_, opts)
-        require("lspconfig").tailwindcss.setup {
-          root_dir = require("lspconfig.util").root_pattern ".git",
           filetypes = {
-            "astro",
-            "html",
-            "php",
             "css",
-            "postcss",
-            "sass",
             "scss",
+            "less",
             "javascript",
             "javascriptreact",
             "typescript",
             "typescriptreact",
           },
-        }
-      end,
-      emmet_ls = function(_, opts)
-        require("lspconfig").emmet_ls.setup {
+          settings = {
+            css = { lint = { unknownAtRules = "ignore" }, validate = true },
+          },
+          root_dir = require("lspconfig.util").root_pattern ".git",
           autostart = true,
         }
+      end,
+      tailwindcss = function(_, opts) require("lspconfig").tailwindcss.setup {} end,
+      emmet_ls = function(_, opts)
+        require("lspconfig").emmet_ls.setup { autostart = true }
       end,
     },
   },
@@ -192,7 +193,8 @@ return {
       },
     },
   },
-  options = { opt = { showtabline = 0, laststatus = 2 } },
+  -- options = { opt = { showtabline = 0, laststatus = 2 } },
+
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
