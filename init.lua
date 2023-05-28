@@ -31,7 +31,7 @@
 -- tokyonight-moon,
 
 return {
-  colorscheme = "github_dark_high_contrast",
+  colorscheme = "NeoSolarized",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
