@@ -1,35 +1,36 @@
+-- NeoSolarized,
+-- catppuccin,
+-- dracula
+-- everforest,
+-- github_dark
+-- github_dark_colorblind
+-- github_dark_default
+-- github_dark_dimmed
+-- github_dark_high_contrast
+-- github_dark_tritanopia
+-- github_dimmed
+-- github_light
+-- github_light_colorblind
+-- github_light_default
+-- github_light_high_contrast
+-- github_light_tritanopia
+-- gruvbox,
+-- kanagawa,
+-- kanagawa-dragon,
+-- kanagawa-lotus,
+-- kanagawa-wave,
+-- mini-base16,
+-- nightfox,
+-- nord
+-- oxocarbon,
+-- rose-pine,
+-- solarized
+-- tokyonight-night,
+-- tokyonight-storm,
+-- tokyonight-day,
+-- tokyonight-moon,
+
 return {
-  -- NeoSolarized,
-  -- catppuccin,
-  -- dracula
-  -- everforest,
-  -- github_dark
-  -- github_dark_colorblind
-  -- github_dark_default
-  -- github_dark_dimmed
-  -- github_dark_high_contrast
-  -- github_dark_tritanopia
-  -- github_dimmed
-  -- github_light
-  -- github_light_colorblind
-  -- github_light_default
-  -- github_light_high_contrast
-  -- github_light_tritanopia
-  -- gruvbox,
-  -- kanagawa,
-  -- kanagawa-dragon,
-  -- kanagawa-lotus,
-  -- kanagawa-wave,
-  -- mini-base16,
-  -- nightfox,
-  -- nord
-  -- oxocarbon,
-  -- rose-pine,
-  -- solarized
-  -- tokyonight-night,
-  -- tokyonight-storm,
-  -- tokyonight-day,
-  -- tokyonight-moon,
   colorscheme = "github_dark_high_contrast",
   icons = {
     ActiveLSP = "",
