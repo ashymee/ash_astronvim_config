@@ -31,7 +31,7 @@
 -- tokyonight-moon,
 
 return {
-  colorscheme = "NeoSolarized",
+  colorscheme = "fluoromachine",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",

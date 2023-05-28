@@ -27,6 +27,14 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
   },
   {
+    "maxmx03/fluoromachine.nvim",
+    opts = {
+      glow = false,
+      transparent = "full",
+      theme = "fluoromachine", -- fluoromachine, delta, retrowave
+    },
+  },
+  {
     "rcarriga/nvim-notify", -- additional configuration if set background to transparent
     opts = { background_colour = "#1a1b26" },
   },
