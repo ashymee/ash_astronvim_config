@@ -1,34 +1,46 @@
--- NeoSolarized,
--- catppuccin,
--- dracula
+-- 🪄 NeoSolarized,
+-- 🪄 catppuccin,
+-- 🪄 dracula
 -- everforest,
--- github_dark
--- github_dark_colorblind
--- github_dark_default
--- github_dark_dimmed
--- github_dark_high_contrast
--- github_dark_tritanopia
--- github_dimmed
--- github_light
--- github_light_colorblind
--- github_light_default
--- github_light_high_contrast
--- github_light_tritanopia
--- gruvbox,
--- kanagawa,
--- kanagawa-dragon,
--- kanagawa-lotus,
--- kanagawa-wave,
+-- 🪄 fluoromachine
+-- 🪄 github_dark
+-- 🪄 github_dark_colorblind
+-- 🪄 github_dark_default
+-- 🪄 github_dark_dimmed
+-- 🪄github_dark_high_contrast
+-- 🪄 github_dark_tritanopia
+-- 🪄 github_dimmed
+-- 🪄 github_light
+-- 🪄 github_light_colorblind
+-- 🪄 github_light_default
+-- 🪄 github_light_high_contrast
+-- 🪄 github_light_tritanopia
+-- 🪄 gruvbox,
+-- 🪄 gruvbox-baby,
+-- iceberg
+-- 🪄 kanagawa,
+-- 🪄 kanagawa-dragon,
+-- 🪄 kanagawa-lotus,
+-- 🪄 kanagawa-wave,
+-- 🪄 mellow
 -- mini-base16,
+-- 🪄 monokai-pro
+-- 🪄 monokai-octagon
+-- 🪄 monokai-machine
+-- 🪄 monokai-ristretto
+-- 🪄 monokai-spectrum
+-- 🪄 monokai-classic
 -- nightfox,
 -- nord
+-- onedark
+-- 🪄 onigiri
 -- oxocarbon,
 -- rose-pine,
 -- solarized
--- tokyonight-night,
--- tokyonight-storm,
--- tokyonight-day,
--- tokyonight-moon,
+-- 🪄 tokyonight-night,
+-- 🪄 tokyonight-storm,
+-- 🪄 tokyonight-day,
+-- 🪄 tokyonight-moon,
 
 return {
   colorscheme = "fluoromachine",
