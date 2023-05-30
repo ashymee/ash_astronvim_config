@@ -96,7 +96,6 @@ return {
         return opts
       end,
     },
-    "simrat39/rust-tools.nvim", -- add lsp plugin
     {
       "williamboman/mason-lspconfig.nvim",
       opts = { ensure_installed = { "rust_analyzer" } },
