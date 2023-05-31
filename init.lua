@@ -43,7 +43,7 @@
 -- 🪄 tokyonight-moon,
 
 return {
-  colorscheme = "fluoromachine",
+  colorscheme = "gruvbox-baby",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
