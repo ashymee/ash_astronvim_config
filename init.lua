@@ -102,16 +102,16 @@ return {
     },
   },
   updater = {
-    remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
-    version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
-    branch = "nightly", -- branch name (NIGHTLY ONLY)
-    commit = nil, -- commit hash (NIGHTLY ONLY)
-    pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
-    skip_prompts = false, -- skip prompts about breaking changes
+    remote = "origin",     -- remote to use
+    channel = "stable",    -- "stable" or "nightly"
+    version = "latest",    -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
+    branch = "nightly",    -- branch name (NIGHTLY ONLY)
+    commit = nil,          -- commit hash (NIGHTLY ONLY)
+    pin_plugins = nil,     -- nil, true, false (nil will pin plugins on stable only)
+    skip_prompts = false,  -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false, -- automatically quit the current session after a successful update
-    remotes = { -- easily add new remotes to track
+    auto_quit = false,     -- automatically quit the current session after a successful update
+    remotes = {            -- easily add new remotes to track
     },
   },
   diagnostics = { virtual_text = true, underline = true },
@@ -164,7 +164,7 @@ return {
       rust_analyzer = function(_, opts)
         require("rust-tools").setup { server = opts }
       end,
-      cssls = function(_, opts)
+      cssls = function()
         require("lspconfig").cssls.setup {
           cmd = { "vscode-css-language-server", "--stdio" },
           filetypes = {
@@ -183,9 +183,16 @@ return {
           autostart = true,
         }
       end,
-      tailwindcss = function(_, opts) require("lspconfig").tailwindcss.setup {} end,
-      emmet_ls = function(_, opts)
-        require("lspconfig").emmet_ls.setup { autostart = true }
+      tailwindcss = function()
+        require("lspconfig").tailwindcss.setup {
+          root_dir = require("lspconfig.util").root_pattern ".git",
+        }
+      end,
+      emmet_ls = function()
+        require("lspconfig").emmet_ls.setup {
+          autostart = true,
+          root_dir = require("lspconfig.util").root_pattern ".git",
+        }
       end,
     },
   },
