@@ -45,11 +45,21 @@
 return {
   heirline = {
     colors = {
-      bg = "#000000",
-      section_bg = "#000000",
-      normal = "#000000",
+      bg = "#000d19",
+      section_bg = "#000d19",
+      section_fg = "#ffa500",
+      normal = "#000d19",
       insert = "#00ff00",
       visual = "#ff00ff",
+      buffer_active_fg = "#ffa500",
+      git_branch_fg = "#00ff00",
+    },
+    attributes = {
+      buffer_active = { bold = true, italic = false },
+      buffer_picker = { bold = false },
+      macro_recording = { bold = true },
+      git_branch = { bold = false },
+      git_diff = { bold = true },
     },
   },
   colorscheme = "gruvbox-baby",
