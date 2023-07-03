@@ -36,9 +36,9 @@ return {
     splitright = true,                                      -- Splitting a new window at the right of the current one
     tabstop = 2,                                            -- Number of space in a tab
     termguicolors = true,                                   -- Enable 24-bit RGB color in the TUI
-    timeoutlen = 500,                                       -- Shorten key timeout length a little bit for which-key
+    timeoutlen = 0,                                         -- Shorten key timeout length a little bit for which-key
     undofile = true,                                        -- Enable persistent undo
-    updatetime = 300,                                       -- Length of time to wait before triggering the plugin
+    updatetime = 0,                                         -- Length of time to wait before triggering the plugin
     virtualedit = "block",                                  -- allow going past end of line in visual block mode
     wrap = false,                                           -- Disable wrapping of lines longer than the width of window
     writebackup = false,                                    -- Disable making a backup before overwriting a file
@@ -46,16 +46,16 @@ return {
   g = {
     -- gitgutter_override_sign_column_highlight = 0, --
 
-    highlighturl_enabled = true,     -- highlight URLs by default
-    mapleader = " ",                 -- set leader key
-    autoformat_enabled = true,       -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-    codelens_enabled = true,         -- enable or disable automatic codelens refreshing for lsp that support it
-    lsp_handlers_enabled = true,     -- enable or disable default vim.lsp.handlers (hover and signatureHelp)
-    cmp_enabled = true,              -- enable completion at start
-    autopairs_enabled = true,        -- enable autopairs at start
-    diagnostics_mode = 3,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
-    icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available)
-    ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+    highlighturl_enabled = true,      -- highlight URLs by default
+    mapleader = " ",                  -- set leader key
+    autoformat_enabled = true,        -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
+    codelens_enabled = true,          -- enable or disable automatic codelens refreshing for lsp that support it
+    lsp_handlers_enabled = true,      -- enable or disable default vim.lsp.handlers (hover and signatureHelp)
+    cmp_enabled = true,               -- enable completion at start
+    autopairs_enabled = true,         -- enable autopairs at start
+    diagnostics_mode = 3,             -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
+    icons_enabled = true,             -- disable icons in the UI (disable if no nerd font is available)
+    ui_notifications_enabled = false, -- disable notifications when toggling UI elements
     gruvbox_baby_transparent_mode = 1,
     mellow_transparent = true,
   },
