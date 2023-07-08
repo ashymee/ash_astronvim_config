@@ -62,7 +62,7 @@ return {
       git_diff = { bold = true },
     },
   },
-  colorscheme = "gruvbox-baby",
+  colorscheme = "oh-my-monokai",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
