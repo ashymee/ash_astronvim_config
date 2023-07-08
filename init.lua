@@ -62,7 +62,7 @@ return {
       git_diff = { bold = true },
     },
   },
-  colorscheme = "NeoSolarized",
+  colorscheme = "gruvbox-baby",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
@@ -178,7 +178,7 @@ return {
         require("typescript").setup {
           server = opts,
           root_dir = require("lspconfig.util").root_pattern ".git",
-          flags = { debounce_text_changes = 150 },
+          flags = { debounce_text_changes = 0 },
         }
       end,
       rust_analyzer = function(_, opts)
