@@ -45,10 +45,10 @@
 return {
   heirline = {
     colors = {
-      bg = "#000d19",
-      section_bg = "#000d19",
+      bg = "#000D19",
+      section_bg = "#000D19",
       section_fg = "#ffa500",
-      normal = "#000d19",
+      normal = "#000D19",
       insert = "#00ff00",
       visual = "#ff00ff",
       buffer_active_fg = "#ffa500",
