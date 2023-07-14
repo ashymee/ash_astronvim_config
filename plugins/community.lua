@@ -52,7 +52,7 @@ return {
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   { "olimorris/onedarkpro.nvim", opts = { options = { transparency = true } } },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
-  { import = "astrocommunity.colorscheme.onigiri-nvim" },
+  -- { import = "astrocommunity.colorscheme.onigiri-nvim" },
   { import = "astrocommunity.colorscheme.poimandres-nvim" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.sonokai" },
