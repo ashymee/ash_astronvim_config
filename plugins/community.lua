@@ -34,7 +34,7 @@ return {
   { import = "astrocommunity.colorscheme.mini-base16" },
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { "loctvl842/monokai-pro.nvim", opts = { transparent_background = true } },
-  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  -- { import = "astrocommunity.colorscheme.neosolarized-nvim" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.colorscheme.nord-nvim" },
   {
