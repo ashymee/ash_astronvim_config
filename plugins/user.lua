@@ -97,4 +97,7 @@ return {
       end
     end,
   },
+  {
+    "wuelnerdotexe/vim-astro",
+  },
 }
