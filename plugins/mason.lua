@@ -40,11 +40,13 @@ return {
         require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
           "black",
           "blade-formatter",
-          "prettierd",
+          "prettier",
           "sqlfmt",
           "stylua",
           "yamlfmt",
-          "eslint_d",
+          "astro",
+          "tsserver",
+          -- "eslint_d",
         })
     end,
   },

@@ -45,14 +45,14 @@
 return {
   heirline = {
     colors = {
-      bg = "#000D19",
-      section_bg = "#000D19",
-      section_fg = "#ffa500",
-      normal = "#000D19",
-      insert = "#00ff00",
-      visual = "#ff00ff",
-      buffer_active_fg = "#ffa500",
-      git_branch_fg = "#00ff00",
+      -- bg = "#000D19",
+      -- section_bg = "#000D19",
+      -- section_fg = "#ffa500",
+      -- normal = "#000D19",
+      -- insert = "#00ff00",
+      -- visual = "#ff00ff",
+      -- buffer_active_fg = "#ffa500",
+      -- git_branch_fg = "#00ff00",
     },
     attributes = {
       buffer_active = { bold = true, italic = false },
@@ -62,7 +62,7 @@ return {
       git_diff = { bold = true },
     },
   },
-  colorscheme = "oh-my-monokai",
+  colorscheme = "fluoromachine",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
@@ -140,21 +140,17 @@ return {
       -- control auto formatting on save
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
-        allow_filetypes = {
-          -- enable format on save for specified filetypes only
-          -- "go",
-        },
-        ignore_filetypes = {
-          -- disable format on save for specified filetypes
-          -- "python",
-        },
         organize_imports_on_format = true,
+        -- ignore_filetypes = {
+        -- disable format on save for specified filetypes
+        -- "python",
+        -- },
       },
-      disabled = {
-        -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
-      },
+      -- disabled = {
+      -- disable formatting capabilities for the listed language servers
+      -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
+      -- "lua_ls",
+      -- },
       timeout_ms = 1000, -- default format timeout
     },
     -- enable servers that you already have installed without mason
@@ -187,15 +183,15 @@ return {
       cssls = function()
         require("lspconfig").cssls.setup {
           cmd = { "vscode-css-language-server", "--stdio" },
-          filetypes = {
-            "css",
-            "scss",
-            "less",
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-          },
+          -- filetypes = {
+          --   "css",
+          --   "scss",
+          --   "less",
+          --   "javascript",
+          --   "javascriptreact",
+          --   "typescript",
+          --   "typescriptreact",
+          -- },
           settings = {
             css = { lint = { unknownAtRules = "ignore" }, validate = true },
           },
