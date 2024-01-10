@@ -36,7 +36,7 @@ return {
     splitright = true, -- Splitting a new window at the right of the current one
     tabstop = 2, -- Number of space in a tab
     termguicolors = true, -- Enable 24-bit RGB color in the TUI
-    timeoutlen = 0, -- Shorten key timeout length a little bit for which-key
+    timeoutlen = 500, -- Shorten key timeout length a little bit for which-key
     undofile = true, -- Enable persistent undo
     updatetime = 0, -- Length of time to wait before triggering the plugin
     virtualedit = "block", -- allow going past end of line in visual block mode
