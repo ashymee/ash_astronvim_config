@@ -68,6 +68,22 @@ return {
 
     ["<leader>c"] = { close, desc = "Close buffer" },
     ["<leader>C"] = { closeAll, desc = "Close all buffers" },
+    ["<C-Up>"] = {
+      function() require("smart-splits").resize_up() end,
+      desc = "Resize split up",
+    },
+    ["<C-Down>"] = {
+      function() require("smart-splits").resize_down() end,
+      desc = "Resize split down",
+    },
+    ["<C-S-Left>"] = {
+      function() require("smart-splits").resize_left() end,
+      desc = "Resize split left",
+    },
+    ["<C-S-Right>"] = {
+      function() require("smart-splits").resize_right() end,
+      desc = "Resize split right",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
