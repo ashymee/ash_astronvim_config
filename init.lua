@@ -1,13 +1,12 @@
 -- 🪄 NeoSolarized,
 -- 🪄 catppuccin,
 -- 🪄 dracula
--- everforest,
 -- 🪄 fluoromachine
 -- 🪄 github_dark
 -- 🪄 github_dark_colorblind
 -- 🪄 github_dark_default
 -- 🪄 github_dark_dimmed
--- 🪄github_dark_high_contrast
+-- 🪄 github_dark_high_contrast
 -- 🪄 github_dark_tritanopia
 -- 🪄 github_dimmed
 -- 🪄 github_light
@@ -17,30 +16,31 @@
 -- 🪄 github_light_tritanopia
 -- 🪄 gruvbox,
 -- 🪄 gruvbox-baby,
--- iceberg
 -- 🪄 kanagawa,
 -- 🪄 kanagawa-dragon,
 -- 🪄 kanagawa-lotus,
 -- 🪄 kanagawa-wave,
 -- 🪄 mellow
--- mini-base16,
--- 🪄 monokai-pro
--- 🪄 monokai-octagon
+-- 🪄 monokai-classic
 -- 🪄 monokai-machine
+-- 🪄 monokai-octagon
+-- 🪄 monokai-pro
 -- 🪄 monokai-ristretto
 -- 🪄 monokai-spectrum
--- 🪄 monokai-classic
+-- 🪄 onigiri
+-- 🪄 tokyonight-day,
+-- 🪄 tokyonight-moon,
+-- 🪄 tokyonight-night,
+-- 🪄 tokyonight-storm,
+-- everforest,
+-- iceberg
+-- mini-base16,
 -- nightfox,
 -- nord
 -- onedark
--- 🪄 onigiri
 -- oxocarbon,
 -- rose-pine,
 -- solarized
--- 🪄 tokyonight-night,
--- 🪄 tokyonight-storm,
--- 🪄 tokyonight-day,
--- 🪄 tokyonight-moon,
 
 return {
   heirline = {
@@ -48,9 +48,9 @@ return {
       -- bg = "#000D19",
       -- section_bg = "#000D19",
       -- section_fg = "#ffa500",
-      -- normal = "#000D19",
-      -- insert = "#00ff00",
-      -- visual = "#ff00ff",
+      -- normal = "#00ff00",
+      -- insert = "#ff0000",
+      -- visual = "#ffa500",
       -- buffer_active_fg = "#ffa500",
       -- git_branch_fg = "#00ff00",
     },
@@ -229,7 +229,6 @@ return {
     },
   },
   -- options = { opt = { showtabline = 0, laststatus = 2 } },
-
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here

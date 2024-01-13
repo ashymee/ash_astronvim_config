@@ -9,8 +9,9 @@ return {
     expandtab = true, -- Enable the use of space in tab
     fileencoding = "utf-8", -- File content encoding for the buffer
     fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
-    foldcolumn = vim.fn.has "nvim-0.9" == 1 and "1" or nil, -- show foldcolumn in nvim 0.9
-    foldenable = true, -- enable fold for nvim-ufo
+    -- foldcolumn = vim.fn.has "nvim-0.9" == 1 and "1" or nil, -- show foldcolumn in nvim 0.9
+    foldcolumn = "0",
+    foldenable = false, -- enable fold for nvim-ufo
     foldlevel = 99, -- set high foldlevel for nvim-ufo
     foldlevelstart = 99, -- start with all code unfolded
     history = 100, -- Number of commands to remember in a history table

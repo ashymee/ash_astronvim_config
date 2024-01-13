@@ -30,9 +30,13 @@ return {
     "maxmx03/fluoromachine.nvim",
     opts = {
       glow = false,
-      transparent = "full",
+      transparent = "full", -- boolean | "full"
       theme = "fluoromachine", -- fluoromachine, delta, retrowave
+      colors = function(_, d) return { bg = d("#000000", 0) } end,
     },
+  },
+  {
+    "tribela/vim-transparent",
   },
   {
     "rcarriga/nvim-notify", -- additional configuration if set background to transparent

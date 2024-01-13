@@ -92,6 +92,15 @@ return {
         "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
       }
       opts.section.buttons.val = {}
+
+      opts.config.layout = {
+        {
+          type = "padding",
+          val = vim.fn.max { 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) },
+        },
+        opts.section.header,
+        { type = "padding", val = 5 },
+      }
       return opts
     end,
   },
