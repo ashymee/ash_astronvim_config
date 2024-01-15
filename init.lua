@@ -62,7 +62,7 @@ return {
       git_diff = { bold = true },
     },
   },
-  colorscheme = "dracula",
+  colorscheme = "fluoromachine",
   icons = {
     ActiveLSP = "",
     ActiveTS = " ",
