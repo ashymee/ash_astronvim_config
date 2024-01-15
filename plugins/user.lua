@@ -21,22 +21,63 @@ return {
     },
     event = "User AstroFile",
   },
-  -- {
-  --   "Tsuzat/NeoSolarized.nvim",
-  --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  --   priority = 1000, -- make sure to load this before all the other start plugins
-  -- },
+  {
+    "Tsuzat/NeoSolarized.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+  },
   {
     "maxmx03/fluoromachine.nvim",
     opts = {
       glow = false,
       transparent = "full", -- boolean | "full"
       theme = "fluoromachine", -- fluoromachine, delta, retrowave
-      colors = function(_, d) return { bg = d("#000000", 0) } end,
+      colors = function(_, d)
+        return {
+          bg = d("#000000", 0),
+          alt_bg = d("#190920", 20),
+          currentline = "#202122", -- #463465
+          selection = "#190940",
+          comment = "#495495",
+          cyan = "#61E2FF",
+          green = "#72f1b8",
+          orange = "#ff8b39",
+          pink = "#ff7edb",
+          purple = "#AF6DF9",
+          red = "#fe4450",
+          yellow = "#daa520", -- #FFCC00
+          cursor_fg = "#282a36",
+          cursor_bg = "#f8f8f8",
+          sign_add = "#72f1b8",
+          sign_change = "#ff8b39",
+          sign_delete = "#fe4450",
+          error = "#fe4450",
+          warning = "#ff8b39",
+          info = "#61E2FF",
+          hint = "#61E2FF",
+          other = "#AF6DF9",
+          blankline = "#57367C",
+          active_blankline = "#39785C",
+          inlay_hint = "#CC64AF",
+        }
+      end,
+      overrides = function(c)
+        return {
+          Cursor = { fg = "NONE", bg = "#32cd32" },
+          Folded = { fg = "#fff999", bg = "#555555" },
+          FoldColumn = { fg = c.yellow, bg = "NONE" },
+          CursorLine = { fg = "NONE", bg = "NONE" }, -- #32CD32
+          CursorLineNr = { fg = "#32cd32", bg = c.bg },
+          LineNr = { fg = "#222222", bg = "NONE" },
+          TelescopeSelection = { fg = "#32cd32", bg = "NONE" },
+          TelescopeSelectionCaret = { fg = "#ff0000", bg = "NONE" },
+          TelescopeMatching = { fg = "#ff0000", bg = "NONE" },
+          TelescopeNormal = { fg = "#555555", bg = "NONE" },
+          TelescopeBorder = { fg = "#222222", bg = "NONE" },
+          Number = { fg = "#ff0000", bg = "NONE" },
+        }
+      end,
     },
-  },
-  {
-    "tribela/vim-transparent",
   },
   {
     "rcarriga/nvim-notify", -- additional configuration if set background to transparent
